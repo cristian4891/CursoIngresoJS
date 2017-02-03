@@ -2,18 +2,11 @@
 y luego mostrarlo por 'alert' al presionar el botón  'MOSTRAR'*/
 function Mostar()
 {
-	var nombre;
-	nombre="Ingrese su nombre";
-	nombre=prompt(nombre);
-
-	alert (nombre);
-
-
-
-
-
-
-
-	var person = prompt("Ingresa tu nombre", "Natalia Natalia");
+ var nombre;
+ //recordar no poner igual en variable
+ nombre=prompt("Ingrese su nombre");
+ alert(nombre);
+ /*con comillas ("nombre"), se muestra la palabra nombre y sin comillas
+ el valor de la variable*/
 }
 

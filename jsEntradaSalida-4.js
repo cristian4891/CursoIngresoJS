@@ -5,7 +5,8 @@
 function Mostar()
 {
 	var nombre;
-	nombre=prompt("Ingrese su nombre");
-	document.getElementById('elNombre').value=nombre;
+	nombre=prompt("Ingrese su nombre:");
+    document.getElementById('elNombre').value=nombre;
+    /*si coloco "=nombre" por delante de "document.get" no funciona*/
 }
 
