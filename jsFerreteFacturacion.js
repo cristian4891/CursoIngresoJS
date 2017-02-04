@@ -9,44 +9,46 @@ function Sumar ()
 	var preciodos;
 	var preciotres;
 	var suma;
-
 	preciouno=document.getElementById('PrecioUno').value;
 	preciodos=document.getElementById('PrecioDos').value;
 	preciotres=document.getElementById('PrecioTres').value;
-	suma=parseInt(preciouno)+parseInt(preciodos)+parseInt(preciotres);
-
-	alert(suma);
+	preciouno=parseInt(preciouno);
+	preciodos=parseInt(preciodos);
+	preciotres=parseInt(preciotres);
+	suma=preciouno+preciodos+preciotres;
+	alert("La suma es: "+suma);
 
 }
 function Promedio () 
 {
-	var precioA;
-	var precioB;
-	var precioC;
+	var preciouno;
+	var preciodos;
+	var preciotres;
 	var promedio;
-
-	precioA=document.getElementById('PrecioUno').value;
-	precioB=document.getElementById('PrecioDos').value;
-	precioC=document.getElementById('PrecioTres').value;
-    promedio=(parseInt(precioA)+parseInt(precioB)+parseInt(precioC))/3;
-
-    alert(promedio);
+    preciouno=document.getElementById('PrecioUno').value;
+    preciodos=document.getElementById('PrecioDos').value;
+    preciotres=document.getElementById('PrecioTres').value;
+    preciouno=parseInt(preciouno);
+    preciodos=parseInt(preciodos);
+    preciotres=parseInt(preciotres);
+    promedio=(preciouno+preciodos+preciotres)/3;
+    alert("El promedio es: "+promedio);
 }
 function PrecioFinal () 
 {
-	var precio1;
-	var precio2;
-	var precio3;
+	var preciouno;
+	var preciodos;
+	var preciotres;
 	var suma;
-	var precioFinal;
+	var preciofinal;
+	preciouno=document.getElementById('PrecioUno').value;
+    preciodos=document.getElementById('PrecioDos').value;
+    preciotres=document.getElementById('PrecioTres').value;
+    preciouno=parseInt(preciouno);
+    preciodos=parseInt(preciodos);
+    preciotres=parseInt(preciotres);
+    suma=preciouno+preciodos+preciotres;
+    preciofinal=suma+(suma*21)/100;
+    alert("El precio final es de: "+preciofinal);
 
-	precio1=document.getElementById('PrecioUno').value;
-	precio2=document.getElementById('PrecioDos').value;
-	precio3=document.getElementById('PrecioTres').value;
-	suma=parseInt(precio1)+parseInt(precio2)+parseInt(precio3);
-    precioFinal=(((parseInt(precio1)+parseInt(precio2)+parseInt(precio3))*21)/100)+suma;
-   
-    alert("El precio final es: "+ precioFinal + "$");
 }
-
-/*(parseInt(precio1)+parseInt(precio2)+parseInt(precio3)*/
