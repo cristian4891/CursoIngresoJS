@@ -68,7 +68,7 @@ function CalcularPrecio ()
     		 	       else
     		 	          {
     		 	      	   PrecioconDescuento=PrecioBruto*0.95;
-    		 	          }	
+                  }
     		 	       }  
     		   }
     	  }	
