@@ -10,94 +10,72 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	var cantidad;
- 	var marca;
- 	var precioDescuento;
- 	var impuesto;
- 	var ingresosBrutos;
-    cantidad=document.getElementById('Cantidad').value;
-    marca=document.getElementById('Marca').value;
-//si elimino la linea anterior no realiza descuentos segun marca
-/*    
-      pdUno=35*cantidad*0.5;
-      pdDos=35*cantidad*0.6;
-      pdTres=35*cantidad*0.7;
-      pdCuatro=35*cantidad*0.75;
-      pdCinco=35*cantidad*0.80;
-      pdSeis=35*cantidad*0.85;
-      pdSiete=35*cantidad*0.90;
-      pdOcho=35*cantidad*0.95;
-*/
-    if(cantidad>5)
-        {    
-           precioDescuento=35*cantidad*0.5;
-      	   document.getElementById('precioDescuento').value=precioDescuento;
-        } 
-
-    if(cantidad==5)
-        {
-      	if(marca=="ArgentinaLuz")
-      	   {
-      	   	  precioDescuento=35*cantidad*0.6;
-              document.getElementById('precioDescuento').value=precioDescuento;
-      	   }
-      	else
-      	   {
-              precioDescuento=35*cantidad*0.7;      	   	
-      	   	  document.getElementById('precioDescuento').value=precioDescuento;
-      	}   
-      }
-
-    if(cantidad==4)
-        {
-      	if(marca=="ArgentinaLuz"||marca=="FelipeLamparas")
-           {
-           	  precioDescuento=35*cantidad*0.75;
-              document.getElementById('precioDescuento').value=precioDescuento;	
-           }
-        else
-            {
-              precioDescuento=35*cantidad*0.80;
-              document.getElementById('precioDescuento').value=precioDescuento;
-            }
-        }
-
-    if(cantidad==3)
-        {
-         if(marca=="ArgentinaLuz")
-            {
-              precioDescuento=35*cantidad*0.85;
-              document.getElementById('precioDescuento').value=precioDescuento;
-            }
-         if(marca=="FelipeLamparas")
-            {
-              precioDescuento=35*cantidad*0.90;
-              document.getElementById('precioDescuento').value=precioDescuento; 
-            }
-         if(marca!="ArgentinaLuz")
-            {
-            	if(marca!="FelipeLamparas")
-            	    {
-            	       precioDescuento=35*cantidad*0.95;
-            		   document.getElementById('precioDescuento').value=precioDescuento;
-            	    }
-            }
-        }
-
-    if (cantidad==1||cantidad==2) 
-        {
-          precioDescuento=35*cantidad;
-          document.getElementById('precioDescuento').value=precioDescuento;
-        }
-
-    if(precioDescuento>120)
-        { 
-      	precioDescuento=document.getElementById('precioDescuento').value;
-      	alert("Su precio con descuento es "+precioDescuento+".");
-      	impuesto=precioDescuento*1.1;
-        ingresosBrutos=impuesto-precioDescuento;
-      	alert("IIBB Usted pago "+impuesto+" siendo "+ingresosBrutos+" el impuesto que se pago.")
-        }
+ var cantidad;
+ var marca;
+ var PrecioBruto;
+ PrecioBruto=cantidad*35;
+ var PrecioconDescuento;
 
 
+ 
+ cantidad=document.getElementById('Cantidad').value;
+ marca=document.getElementById('Marca').value;
+
+ if(cantidad>5)
+ {
+  PrecioconDescuento=PrecioBruto*0.5;
+ }
+ else
+ {
+ 	if(cantidad==5)	
+ 	{
+ 		if(marca=="ArgentinaLuz")
+ 		{	
+ 		 PrecioconDescuento=PrecioBruto*0.60;
+ 		}
+ 		else
+ 		{
+ 		 PrecioconDescuento=PrecioBruto*0.70;
+ 		}	
+ 	}
+    else
+    {
+    	if(cantidad==4)
+    	{
+           if(marca=="ArgentinaLuz"||marca=="FelipeLamparas")
+           	{
+           		PrecioconDescuento=PrecioBruto*0.75;
+           	}
+           	else
+           	{
+           		PrecioconDescuento=PrecioBruto*0.80;
+           	}	
+    	}
+    	else
+    	{
+    		if(cantidad==3)
+    		 {
+    		 	if(marca=="ArgentinaLuz")
+    		 	  {
+    		 	  	PrecioconDescuento=PrecioBruto*0.85;
+    		 	  }
+    		 	else
+    		 	{
+    		 		if(marca=="FelipeLamparas")
+    		 	      {
+    		 	      	PrecioconDescuento=PrecioBruto*0.90;
+    		 	      }
+    		 	    else
+    		 	      {
+    		 	      	PrecioconDescuento=PrecioBruto*0.95;
+    		 	      }	
+
+    		 	}  
+    		 }
+    	}	
+    }
+
+ }
+if (PrecioconDescuento)
 }
+
