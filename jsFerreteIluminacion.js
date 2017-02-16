@@ -10,68 +10,92 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- var cantidad;
- var marca;
- var PrecioBruto;
- PrecioBruto=cantidad*35;
- var PrecioconDescuento;
-
-
- 
- cantidad=document.getElementById('Cantidad').value;
- marca=document.getElementById('Marca').value;
-
-   if(cantidad>5)
-     {
-     PrecioconDescuento=PrecioBruto*0.5;
-     }
- else
-     {
- 	   if(cantidad==5)	
- 	        {
- 		      if(marca=="ArgentinaLuz")
- 		         {	
- 		          PrecioconDescuento=PrecioBruto*0.60;
- 		         }
- 		      else
- 		         {
- 		          PrecioconDescuento=PrecioBruto*0.70;
- 		         }	
- 	        }
-     else
+    var cantidadlamparas=document.getElementById('Cantidad').value;
+    var marca=document.getElementById('Marca').value;
+    var importeBruto=cantidadlamparas*35;
+    var precioconDescuento;
+    
+    switch (marca)
+    {   case "ArgentinaLuz":
+        case "FelipeLamparas":
+        case "JeLuz":
+        case "HazIluminacion":
+        case "Osram":
+        if(cantidadlamparas>5)
         {
-    	  if(cantidad==4)
-    	       {
-             if(marca=="ArgentinaLuz"||marca=="FelipeLamparas")
-                {
-                 PrecioconDescuento=PrecioBruto*0.75;
-                }
-             else
-           	    {
-           		   PrecioconDescuento=PrecioBruto*0.80;
-           	    }	
-    	       }
-    	  else
-    	     {
-    		   if(cantidad==3)
-    		      {
-    		 	    if(marca=="ArgentinaLuz")
-    		 	       {
-    		 	  	    PrecioconDescuento=PrecioBruto*0.85;
+            precioconDescuento=importeBruto*0.5;
+        }
+        break;
+
+        case "ArgentinaLuz":
+            switch(cantidadlamparas)
+            {
+            case 5:
+                 {
+                   precioconDescuento=importeBruto*0.6;
                  }
-    		 	    else
-    		 	       {
-    		 		     if(marca=="FelipeLamparas")
-    		 	          {
-    		 	      	   PrecioconDescuento=PrecioBruto*0.90;
-    		 	          }
-    		 	       else
-    		 	          {
-    		 	      	   PrecioconDescuento=PrecioBruto*0.95;
-                  }
-    		 	       }  
-    		   }
-    	  }	
-     }
+            case 4:
+                 {
+                   precioconDescuento=importeBruto*0.75;
+                 }
+            case 3:
+                 {
+                   precioconDescuento=importeBruto*0.85;
+                 }
+            break;
+            }    
+
+/*        case "FelipeLamparas":
+            switch(cantidadlamparas)
+            {
+            case 4:
+                 {
+                   precioconDescuento=importeBruto*0.75;
+                 }
+            case 3:
+                 {
+                   precioconDescuento=importeBruto*0.90;
+                 }
+             
+            break;
+            }
+
+        case "FelipeLamparas":
+        case "JeLuz":
+        case "HazIluminacion":
+        case "Osram":
+             if(cantidadlamparas==5)
+             {
+                precioconDescuento=importeBruto*0.7;
+             }
+        break;
+
+        case "JeLuz":
+        case "HazIluminacion":
+        case "Osram":
+              if(cantidadlamparas==4) 
+              {
+                precioconDescuento=importeBruto*0.80;
+              }
+        break;
+
+        case "JeLuz":
+        case "HazIluminacion":
+        case "Osram":
+              if(cantidadlamparas==3) 
+              {
+                precioconDescuento=importeBruto*0.95;
+              }
+        break;*/
+        
+/*        default: 
+              if(cantidadlamparas==1||cantidadlamparas==2)
+              {
+                precioconDescuento=importeBruto;
+              }*/
+            
+    }
+    
+    document.getElementById('precioDescuento').value=precioconDescuento;
 
 }
