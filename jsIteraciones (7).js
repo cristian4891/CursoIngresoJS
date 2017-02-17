@@ -11,7 +11,7 @@ function Mostrar()
 		contador++;
 		numero=prompt("Ingrese un numero");
 		numero=parseInt(numero);
-		acumulador=contador+numero;
+		acumulador=acumulador+numero;
 		respuesta=prompt("Desea continuar");
 
 	}
