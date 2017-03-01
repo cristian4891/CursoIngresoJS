@@ -1,4 +1,5 @@
 function Mostrar()
+
 {
  	var contador=0;
  	var contador1=0;
@@ -21,16 +22,16 @@ function Mostrar()
  	var porcentaje8=0;
  	var porcentaje9=0;
  	var porcentaje10=0;
- 
  	var numerorandom;
 
- 	for (              ;contador<10000;contador++) //es importante que esten los punto y coma sino el for no funciona
+
+ 	for (              ;contador<10000;contador++)
+     /*es importante que esten los punto
+     y coma sino el for no funciona*/
  	{
-
-
- 	
-			numerorandom=Math.floor((Math.random() * 10) + 1);
-	/*console.log(numerorandom);*/
+		    numerorandom=Math.floor((Math.random() * 10) + 1);
+	        /*console.log(numerorandom);*/
+	       
 
     		switch (numerorandom)
     	{
@@ -52,12 +53,14 @@ function Mostrar()
         	contador6++;
         	break;
         	case 7:
-        	if(contador7==7)
+      		if(contador7<0.07*10000)   		
+     			{
+        			contador7++;    //limito el porcentaje a 7%
+        		}
+        	else
         		{
-        			continue;
+                    continue;
         		}	
-
-        	contador7++;
         	break;
         	case 8:
         	contador8++;
@@ -69,11 +72,7 @@ function Mostrar()
         	break;
         	
    		}
-
-    
-
-
- }
+    }
 
  porcentaje1=contador1/contador*100;
  porcentaje2=contador2/contador*100;
@@ -86,6 +85,7 @@ function Mostrar()
  porcentaje9=contador9/contador*100;
  porcentaje10=contador10/contador*100;
 
+
  console.log("La cantidad de porcentaje de 1: "+porcentaje1+"%");
  console.log("La cantidad de porcentaje de 2: "+porcentaje2+"%");
  console.log("La cantidad de porcentaje de 3: "+porcentaje3+"%");
@@ -97,40 +97,30 @@ function Mostrar()
  console.log("La cantidad de porcentaje de 9: "+porcentaje9+"%");
  console.log("La cantidad de porcentaje de 10: "+porcentaje10+"%");
 
-
-
- console.log("La cantidad de numeros es: "+contador1);
- console.log("La cantidad de numeros es: "+contador2);                 ;
- console.log("La cantidad de numeros es: "+contador3);
- console.log("La cantidad de numeros es: "+contador4);
- console.log("La cantidad de numeros es: "+contador5);
- console.log("La cantidad de numeros es: "+contador6);
- console.log("La cantidad de numeros es: "+contador7);
- console.log("La cantidad de numeros es: "+contador8);
- console.log("La cantidad de numeros es: "+contador9);
- console.log("La cantidad de numeros es: "+contador10);
+ console.log("La cantidad de numeros 1 es: "+contador1);
+ console.log("La cantidad de numeros 2 es: "+contador2);                 ;
+ console.log("La cantidad de numeros 3 es: "+contador3);
+ console.log("La cantidad de numeros 4 es: "+contador4);
+ console.log("La cantidad de numeros 5 es: "+contador5);
+ console.log("La cantidad de numeros 6 es: "+contador6);
+ console.log("La cantidad de numeros 7 es: "+contador7);
+ console.log("La cantidad de numeros 8 es: "+contador8);
+ console.log("La cantidad de numeros 9 es: "+contador9);
+ console.log("La cantidad de numeros 10 es: "+contador10);
 
  console.log(contador);
-
- //agarrar todos los contadores y sumarlos
-
- 
-
 }
+/*{*/
+/*	var contador;
 
+	for (contador=0;contador<=10;contador++)
+		{
+			
+			document.write(contador+"<br>");
 
+		}*/
+	
+	/*document.write(contador+"<br>"); poniendo al final solo imprime el ultimo numero
+	en este caso 10*/ 
 
-
-
-
-
-
-	/*var numerorandom;*/
-/* 	contador++
- 	if (contador==5)
- 	{
- 		break; //para salir de for
- 	}
- 	console.log(contador);
-
- 	document.write(contador+"<br>")*/
+/*}*/
